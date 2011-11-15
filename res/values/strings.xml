@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ■■■  このURLを『緊急時対応方法が書かれているWebページのもの』に書き換えてください。  ■■■ -->
+    <string name="taiouhouhou_url">http://www.koryo-pta.org/info_2010.html</string>
+        
+    <!-- ■■■  このメッセージを、『SafetyCardの説明文』に書き換えてください。  ■■■ -->
+    <string name="about_message">Safety Cardは「高校生の、高校生による、高校生のための交通安全運動」である「かながわ新運動」の一環として、交通事故や災害などの緊急時に役立つことを目指してPTAにより作成されたツールです。</string>
+
+        
+        
+        
+        
+    <string name="app_name">SafetyCard</string>
+    <string name="title">Safety Card</string>
+    <string name="chuuijikou">緊急時対応方法を読む</string>
+    <string name="kiroku">事故を記録する</string>
+    <string name="personaldata">パーソナルデータ</string>
+    <string name="about">SafetyCardについて</string>
+    <string name="shinki_sakusei">新規作成</string>
+    
+
+        
+        
+
+</resources>
