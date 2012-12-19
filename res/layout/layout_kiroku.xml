@@ -14,38 +14,139 @@
 	    android:layout_weight="1"
 		>
 
-		<LinearLayout
+	    <LinearLayout
 		    android:layout_width="fill_parent"
 		    android:layout_height="wrap_content"
 		    android:layout_weight="1"
 		    android:padding="10dp"
 		    android:orientation="vertical" >
 		    
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="記録日時"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+				android:orientation="horizontal"
+			>
+		        <TextView
+		            android:id="@+id/tvDate"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:padding="2dp"
+		            android:layout_weight="0.67"
+		            android:gravity="center"
+		            android:editable="false"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:background="#BBBBBB"
+		            android:inputType="date" />
+		
+		        <TextView
+		            android:id="@+id/tvTime"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:padding="2dp"
+		            android:layout_weight="1.0"
+		            android:gravity="center"
+		            android:editable="false"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:background="#BBBBBB"
+		            android:inputType="time" />
+		    </LinearLayout>
+		
 		    <TextView
-		        android:id="@+id/textView2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="発生場所"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		    <EditText
+		        android:id="@+id/etPlace"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:inputType="textMultiLine"
+			/>
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+				android:orientation="horizontal"
+			>
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_weight="1"
+				>
+				    <LinearLayout
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+						android:orientation="horizontal"
+					>
+					    <TextView
+					        android:id="@+id/tvLatitudeLabel"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:text=""
+					        android:paddingLeft="20dp"
+					    />
+					    <TextView
+					        android:id="@+id/tvLatitudeValue"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:text=""
+					        android:paddingLeft="20dp"
+					    />
+					</LinearLayout>
+				    <LinearLayout
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+						android:orientation="horizontal"
+					>
+				    	<TextView
+					        android:id="@+id/tvLongitudeLabel"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:text=""
+					        android:paddingLeft="20dp"
+					    />
+						<TextView
+					        android:id="@+id/tvLongitudeValue"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:text=""
+					        android:paddingLeft="20dp"
+					    />
+					</LinearLayout>
+				</LinearLayout>
+			    <Button
+			    	android:id="@+id/buttonMap"
+			    	android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Map"
+			    />
+			</LinearLayout>
+		    <TextView
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:text="相手の名前"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		
 		    <EditText
-		        android:id="@+id/editText2"
+		        android:id="@+id/etName"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
-		        android:inputType="textPersonName" >
-		
-		        <!-- requestFocus / -->
-		    </EditText>
+		        android:inputType="textPersonName" />
 		
 		    <TextView
-		        android:id="@+id/textView3"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:text="相手の電話番号"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		
 		    <EditText
-		        android:id="@+id/editText3"
+		        android:id="@+id/etTelNo"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:inputType="phone" />
@@ -58,7 +159,7 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		
 		    <EditText
-		        android:id="@+id/editText4"
+		        android:id="@+id/etAddress"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:inputType="textPostalAddress" />
@@ -71,51 +172,11 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 		    <EditText
-		        android:id="@+id/editText6"
+		        android:id="@+id/etCarNo"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:inputType="textMultiLine" />
 		
-		    <TextView
-		        android:id="@+id/textView1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="発生日時"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-		
-		    <LinearLayout
-		        android:id="@+id/linearLayout1"
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content" >
-		
-		        <EditText
-		            android:id="@+id/editText1"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:layout_weight="1"
-		            android:inputType="date" />
-		
-		        <EditText
-		            android:id="@+id/editText5"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:layout_weight="0.67"
-		            android:inputType="time" />
-		    </LinearLayout>
-		
-		    <TextView
-		        android:id="@+id/textView6"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="発生場所"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-		
-		    <EditText
-		        android:id="@+id/editText7"
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:inputType="textMultiLine" />
-		    
 		    <TextView
 		        android:id="@+id/textView6"
 		        android:layout_width="wrap_content"
@@ -124,24 +185,61 @@
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 		    
 		    <EditText
-		        android:id="@+id/editText7"
+		        android:id="@+id/etOther"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:inputType="textMultiLine" />
 		    
-		    <Button
-		        android:id="@+id/buttonCamera"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="写真を撮る"
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" >
+		    	<Button
+			        android:id="@+id/buttonCamera1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="写真1"
+					/>		        
+					
+			    <ImageView
+			        android:id="@+id/imageCamera1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+				/>
+		    </LinearLayout>
+
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" >
+       		    <Button
+			        android:id="@+id/buttonCamera2"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="写真2"
 				/>		        
-				
-		    <ImageView
-		        android:id="@+id/imageCamera"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-			/>
-		
+					
+			    <ImageView
+			        android:id="@+id/imageCamera2"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+				/>
+		    </LinearLayout>
+			
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" >
+       			<Button
+			        android:id="@+id/buttonCamera3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="写真3"
+				/>		        
+					
+			    <ImageView
+			        android:id="@+id/imageCamera3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+				/>
+			</LinearLayout>		    		
 		    		    		    
 
 		</LinearLayout>

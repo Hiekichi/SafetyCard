@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <PreferenceCategory android:title="パーソナルデータ">
+        <EditTextPreference android:title="名前（必須）"
+            android:key="key_name"
+            android:summary="あなたの名前"
+        />
+        <EditTextPreference android:title="緊急連絡先"
+            android:key="key_tel"
+            android:summary="緊急時に連絡して欲しい電話番号"
+        />
+        <ListPreference
+            android:key="key_blood"
+            android:title="血液型"
+            android:summary="あなたの血液型"
+            android:dialogTitle="血液型選択"
+            android:entries="@array/blood_entries"
+            android:entryValues="@array/blood_entryvalues"
+            android:defaultValue="A"
+        />
+        <EditTextPreference android:title="その他"
+            android:key="key_other"
+            android:summary="学校名など"
+        />
+	</PreferenceCategory>
+	
+</PreferenceScreen>

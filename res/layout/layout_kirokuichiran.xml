@@ -13,8 +13,10 @@
 	    <ListView
 	        android:id="@+id/listKirokuichiran"
 	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
+	        android:layout_height="fill_parent"
 	        android:fadingEdgeLength="50dp"
+			android:divider="#001166"
+			android:dividerHeight="2sp"
 	    >
 	    </ListView>
 	</LinearLayout>    
